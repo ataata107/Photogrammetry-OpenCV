@@ -29,6 +29,8 @@ This problem led me to learn different ways of approaching the problem and led m
 10. Here we will be checking if there is a contour detected.  If no contour is detected than obviously there is no GCP in the given image. If there is a contour then we can proceed further.
 
 11. Contours detected are sorted. We have bound the contours in a rectangular box. Contour mask is selected and the roi is determined. Image of the contour is also stored. Mask is thresholded to remove noices. Below is the image of thresholded mask after contour detection.
+![segmentno2](https://user-images.githubusercontent.com/32903329/38301902-8b6d3384-381e-11e8-8503-a1d0262ca50b.jpg)
+
 
 12. ROI is resized now
 
