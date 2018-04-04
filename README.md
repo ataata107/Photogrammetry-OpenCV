@@ -42,12 +42,12 @@ This problem led me to learn different ways of approaching the problem and led m
 #Errors
 Only one error was found which was detection of two contours in DSC01798.jpg but as you might have noticed that the L is distorted in this image and it seems there are two L's in the image. Hence conclusion was that algorithm performed uptill its best and as the two GCP's detected in this image are very close one of them can be ignored.
 
-#Some other approaches.
+# Some other approaches.
 1. I tried training a haar cascade model to detect L shape but it was not successful 
 
 2. OCR was also tried but many errors were there in detection of L shape.
 
-#Future improvement
+# Future improvement
 
 1. This model can be improved by using the techniques of machine learning.
 
