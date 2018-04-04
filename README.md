@@ -35,6 +35,6 @@ This problem led me to learn different ways of approaching the problem and led m
 
 12. ROI is resized now
 
-12. We have increased the roi than the initial contour detected for better visualisation purposes.  Contours are again deteceted and the the centre of the contour will be our GCP. Below is the image of GCP of image detected.
+12. We have increased the roi than the initial contour detected for better visualisation purposes.  Contours are again deteceted and the the centre of the contour will be our GCP. Below is the image of GCP of image detected, which is the intersection of blue lines
 
 ![capture](https://user-images.githubusercontent.com/32903329/38302093-23c5ffb2-381f-11e8-8ad8-39681fe82ce6.PNG)
