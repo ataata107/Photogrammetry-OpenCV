@@ -15,4 +15,7 @@ This problem led me to learn different ways of approaching the problem and led m
 
 5. Now the lower and the upper bound is set for the image We found these values with help of colorRange.py
 
-6. Image is converted into hsv scale.
+6. Image is converted into hsv scale. Below is the effect
+![image](https://user-images.githubusercontent.com/32903329/38300459-751c6c48-381a-11e8-8c55-1b1dcb52f750.png)
+
+7.  HSV image is fed to inbuilt inrange function to the find the suitable mask of the image. Using this we are able to seperate out white values from the image.
