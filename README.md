@@ -3,7 +3,7 @@ We have been given a photo in that there can be a strip of white colored L shape
 We have to detect the location of GCP if it is present in the photo.
 This problem led me to learn different ways of approaching the problem and led me to learn new methods of computer vision. Here I will tell you step by step the procedure approached by me
 
-1. A photo was selected in the given folder/for/assignment.
+1. A photo was selected in the given folder/for_assignment.
 
 2. Image is blurred so as to remove noice. For blurring we are using inbuilt PyrMeanshift  blurring as I found it best against manually making a kernel or using gaussian blur. This method led to the best mask creation in color range .py. Below is a photo of this filtering.
 
@@ -11,7 +11,7 @@ This problem led me to learn different ways of approaching the problem and led m
 
 3. Initially, I planned to brighten the image in the initial steps but that led to detection of unwanted pixels in the mask.
 
-4. Also, whole code was proceeded by initially recizing the image but that plan was abolished as it didnt lead to correct contour detections.
+4. Also, whole code was proceeded by initially resizing the image but that plan was abolished as it didnt lead to correct contour detections.
 
 5. Now the lower and the upper bound is set for the image We found these values with help of colorRange.py
 
@@ -39,7 +39,8 @@ This problem led me to learn different ways of approaching the problem and led m
 
 ![capture](https://user-images.githubusercontent.com/32903329/38302093-23c5ffb2-381f-11e8-8ad8-39681fe82ce6.PNG)
 
-#Errors
+# Errors
+
 Only one error was found which was detection of two contours in DSC01798.jpg but as you might have noticed that the L is distorted in this image and it seems there are two L's in the image. Hence conclusion was that algorithm performed uptill its best and as the two GCP's detected in this image are very close one of them can be ignored.
 
 # Some other approaches.
