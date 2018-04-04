@@ -4,7 +4,7 @@ Lower = (59, 0, 119)
 Upper = (255, 255, 255)
 
 
-img=cv2.imread('for_assignment/DSC02426.JPG')
+img=cv2.imread('for_assignment/DSC01886.JPG')
 
 #img = cv2.resize(img, (1000, 1000))
 #img = cv2.addWeighted(img,2,np.zeros(img.shape,img.dtype),0,50)
@@ -33,23 +33,25 @@ print(len(cnts),"length")
 sorted_ctrs = sorted(cnts, key=lambda ctr: cv2.boundingRect(ctr)[0])
 
 for i, ctr in enumerate(sorted_ctrs):
-
+    print (i)
     # Get bounding box
     x, y, w, h = cv2.boundingRect(ctr)
  
     # Getting ROI
-    roi = mask[y-2:y+h+20, x-20:x+w+20]
-    roi_im= img[y-2:y+h+20, x-20:x+w+20]
+    roi = mask[y-20:y+h+20, x-20:x+w+20]
+    roi_im= img[y-20:y+h+20, x-20:x+w+20]
     roi_bright=cv2.addWeighted(roi,2,np.zeros(roi.shape,roi.dtype),0,50)
     ret,thresh1 = cv2.threshold(roi,127,255,cv2.THRESH_BINARY)
     kernel = np.ones((15,15), np.float32)/225
     #roi = cv2.filter2D(roi,-1,kernel)
     #roi = cv2.GaussianBlur(roi, (11, 11), 0)
     #roi = cv2.dilate(roi, None, iterations = 2)
-    roi = cv2.resize(roi, (100, 100))
+    thresh1 = cv2.resize(thresh1, (50, 50))
+    roi_im = cv2.resize(roi_im, (50, 50))
  
     # show ROI
-    cv2.imshow('segment no:'+str(i),roi)
+    cv2.imwrite('segmentno1.jpg',roi_im)
+    cv2.imwrite('segmentno2.jpg',thresh1)
     #cv2.rectangle(img,(x,y),( x + w, y + h ),(0,255,0),1)
     cv2.waitKey(0)
     
