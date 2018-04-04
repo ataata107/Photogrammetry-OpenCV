@@ -18,4 +18,18 @@ This problem led me to learn different ways of approaching the problem and led m
 6. Image is converted into hsv scale. Below is the effect
 ![image](https://user-images.githubusercontent.com/32903329/38300459-751c6c48-381a-11e8-8c55-1b1dcb52f750.png)
 
-7.  HSV image is fed to inbuilt inrange function to the find the suitable mask of the image. Using this we are able to seperate out white values from the image.
+7.  HSV image is fed to inbuilt inrange function to the find the suitable mask of the image. Using this we are able to seperate out white values from the image. Below is the mask of the image
+
+![image](https://user-images.githubusercontent.com/32903329/38300637-eb348582-381a-11e8-9996-601c24ca0d19.png)
+
+8. Now rather than processing on the whole image we have to find the regions of concerned white area of the image and process on that area alone.
+
+9. For finding out the concerned area we will be using findcontours in built open cv function.
+
+10. Here we will be checking if there is a contour detected.  If no contour is detected than obviously there is no GCP in the given image. If there is a contour then we can proceed further.
+
+11. Contours detected are sorted. We have bound the contours in a rectangular box. Contour mask is selected and the roi is determined. Image of the contour is also stored. Mask is thresholded to remove noices. Below is the image of thresholded mask after contour detection.
+
+12. ROI is resized now
+
+12. We have increased the roi than the initial contour detected for better visualisation purposes.  Contours are again deteceted and the the centre of the contour will be our GCP. Below is the image of GCP of image detected.
