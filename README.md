@@ -38,3 +38,20 @@ This problem led me to learn different ways of approaching the problem and led m
 12. We have increased the roi than the initial contour detected for better visualisation purposes.  Contours are again deteceted and the the centre of the contour will be our GCP. Below is the image of GCP of image detected, which is the intersection of blue lines
 
 ![capture](https://user-images.githubusercontent.com/32903329/38302093-23c5ffb2-381f-11e8-8ad8-39681fe82ce6.PNG)
+
+#Errors
+Only one error was found which was detection of two contours in DSC01798.jpg but as you might have noticed that the L is distorted in this image and it seems there are two L's in the image. Hence conclusion was that algorithm performed uptill its best and as the two GCP's detected in this image are very close one of them can be ignored.
+
+#Some other approaches.
+1. I tried training a haar cascade model to detect L shape but it was not successful 
+
+2. OCR was also tried but many errors were there in detection of L shape.
+
+#Future improvement
+
+1. This model can be improved by using the techniques of machine learning.
+
+# Time taken
+
+On 1st April evening I started doing this problem as I was out of station for some time. Within a day that is by 2nd April I was able to detect the GCP.  To increase the robustness of model, on 3rd April I trained a haar cascade model but there were some errors. I also tried OCR and some other ML techniques but it required huge dataset.
+On 4th April I summarized the code 
